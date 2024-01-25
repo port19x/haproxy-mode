@@ -57,10 +57,16 @@
 
 ;;^\s+\\|
 (defvar haproxy-font-lock-keywords
-  (list '("\\(^\\)\\(frontend\\|listen\\|backend\\|resolvers\\|defaults\\|global\\|description\\)" . font-lock-keyword-face)
-        '("\\(^\s+\\)\\(redirect\\)" . font-lock-builtin-face)
-        '("\\(use_backend\\|default-server\\|server\\)" . font-lock-variable-name-face)
-        '("\\(block\\|capture\\|stats\\|default_backend\\)" . font-lock-type-face)))
+  (list '("\\(^\\)\\(global\\|defaults\\|frontend\\|backend\\|listen\\|resolvers\\)" . font-lock-keyword-face)
+        '("\\(^\s+\\)\\(maxconn\\|log\\|user\\|chroot\\|pidfile\\|daemon\\)" . font-lock-variable-name-face)
+        '("\\(^\s+\\)\\(bind\\|mode\\|log\\|option\\|timeout\\|acl\\|use_backend\\|default_backend\\)" . font-lock-variable-name-face)
+        '("\\(^\s+\\)\\(balance\\|server\\)" . font-lock-variable-name-face)
+        '("\\(^\s+\\)\\(http-request\\|http-response\\|redirect\\|stats\\)" . font-lock-variable-name-face)
+        '("\\(^\s+\\)\\(ssl.*\\)" . font-lock-doc-face)
+        '("\\(:[0-9]+\\|[0-9]+s$\\)" . font-lock-string-face)
+        '(" if " . font-lock-builtin-face)
+        '("\\(path_beg\\|path_end\\|if\\)" . font-lock-builtin-name-face)
+        ))
 
 
 ;;;;##########################################################################
@@ -70,7 +76,6 @@
 (defvar haproxy-mode-map
   (let
       ((map (make-sparse-keymap)))
-    (define-key map "\C-j" 'transient-noop)
     map)
   "Keymap for editing haproxy config files.")
 
