@@ -85,7 +85,6 @@
   "Keymap for editing haproxy config files.")
 
 ; TODO flycheck & flymake support via haproxy -c shell-command
-; TODO significant whitespace... maybe look at python mode (?)
 
 ;;;###autoload
 (define-derived-mode haproxy-mode prog-mode "Haproxy"
