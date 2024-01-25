@@ -5,7 +5,7 @@
 ;; Author: port19 <port19@port19.xyz>
 ;; Maintainer: port19 <port19@port19.xyz>
 ;; Created: 24 Jan 2024
-;; Version: 0.1.0
+;; Version: 0.2.0
 ;; Keywords: haproxy
 
 ;; available from https://github.com/port19x/haproxy-mode
