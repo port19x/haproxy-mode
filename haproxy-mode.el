@@ -63,7 +63,7 @@
         '("\\(^\s+\\)\\(balance\\|server\\)" . font-lock-variable-name-face)
         '("\\(^\s+\\)\\(http-request\\|http-response\\|redirect\\|stats\\)" . font-lock-variable-name-face)
         '("\\(^\s+\\)\\(ssl.*\\)" . font-lock-doc-face)
-        '("\\(:[0-9]+\\|[0-9]+s$\\)" . font-lock-string-face)
+        '("\\([a-zA-Z0-9.:*]+\\)?\\(:[0-9]+\\|[0-9]+s$\\)" . font-lock-string-face)
         '(" if " . font-lock-builtin-face)
         '("\\(path_beg\\|path_end\\|if\\)" . font-lock-builtin-name-face)
         ))
