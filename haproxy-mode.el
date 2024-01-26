@@ -4,8 +4,10 @@
 
 ;; Author: port19 <port19@port19.xyz>
 ;; Maintainer: port19 <port19@port19.xyz>
+;; Homepage: https://github.com/port19x/haproxy-mode
 ;; Created: 24 Jan 2024
 ;; Version: 0.3.0
+;; Package-Version: 0.3.0
 ;; Keywords: haproxy languages tools
 
 ;; available from https://github.com/port19x/haproxy-mode
