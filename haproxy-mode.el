@@ -1,16 +1,14 @@
-;; haproxy-mode.el --- emacs major mode for editing HAProxy config files
+;;; haproxy-mode.el --- Major mode for editing HAProxy config files -*- lexical-binding: t -*-
 
-;; Copyright 2024 port19 <port19@port19.xyz>
+;; Copyright (c) 2024 port19
 
 ;; Author: port19 <port19@port19.xyz>
-;; Maintainer: port19 <port19@port19.xyz>
-;; Homepage: https://github.com/port19x/haproxy-mode
-;; Created: 24 Jan 2024
 ;; Version: 0.3.0
-;; Package-Version: 0.3.0
-;; Keywords: haproxy languages tools
-
-;; available from https://github.com/port19x/haproxy-mode
+;; Package-Requires: ((emacs "24"))
+;; Keywords: haproxy, languages, tools
+;; Homepage: https://github.com/port19x/haproxy-mode
+;; URL: https://github.com/port19x/haproxy-mode
+;; Created: 24 Jan 2024
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -27,12 +25,14 @@
 
 ;;; Commentary:
 
-;; This is a quick mode for editing HAProxy config files, as no appropiate mode existed before.
+;; This is a major mode for editing HAProxy config files, as no appropiate mode existed before.
 ;; Version 0.x denotes an unfinished project.
 ;; See the TODO comments in this source file for planned additions.
 
 ;; Put this file into your `load-path` and the following into your `~/.emacs`:
 ;;   (require 'haproxy-mode)
+
+;; See the README for more details.
 
 ;;; Code:
 
