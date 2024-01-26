@@ -84,10 +84,13 @@
     map)
   "Keymap for editing haproxy config files.")
 
-; TODO flycheck & flymake support via haproxy -c shell-command
+; TODO flycheck & flymake support via haproxy -c shell-command (+ invokability via local key or menu bar)
+; TODO indent-line-function
+; TODO define abbrevs
+; TODO imenu definition finding
 
 ;;;###autoload
-(define-derived-mode haproxy-mode prog-mode "Haproxy"
+(define-derived-mode haproxy-mode prog-mode "HAProxy"
   "Major mode for highlighting haproxy config files.
 
 The variable haproxy-indent-level controls the amount of indentation.
