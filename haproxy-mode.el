@@ -1,12 +1,12 @@
-;; haproxy-mode.el --- major mode for editing haproxy config files
+;; haproxy-mode.el --- emacs major mode for editing HAProxy config files
 
 ;; Copyright 2024 port19 <port19@port19.xyz>
 
 ;; Author: port19 <port19@port19.xyz>
 ;; Maintainer: port19 <port19@port19.xyz>
 ;; Created: 24 Jan 2024
-;; Version: 0.2.0
-;; Keywords: haproxy
+;; Version: 0.3.0
+;; Keywords: haproxy languages tools
 
 ;; available from https://github.com/port19x/haproxy-mode
 
@@ -26,9 +26,8 @@
 ;;; Commentary:
 
 ;; This is a quick mode for editing HAProxy config files, as no appropiate mode existed before.
-
-;; Many thanks to the author of `nginx-mode.el`, from where this is a direct fork.
-;; Most of the code of this package is just adapted from nginx-mode.
+;; Version 0.x denotes an unfinished project.
+;; See the TODO comments in this source file for planned additions.
 
 ;; Put this file into your `load-path` and the following into your `~/.emacs`:
 ;;   (require 'haproxy-mode)
