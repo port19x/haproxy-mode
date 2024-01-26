@@ -92,7 +92,7 @@
 (define-derived-mode haproxy-mode prog-mode "HAProxy"
   "Major mode for highlighting haproxy config files.
 
-The variable haproxy-indent-level controls the amount of indentation.
+The variable `haproxy-indent-level' controls the amount of indentation.
 \\{haproxy-mode-map}"
   :syntax-table haproxy-mode-syntax-table
 
