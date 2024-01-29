@@ -25,14 +25,15 @@
 
 ;;; Commentary:
 
-;; This is a major mode for editing HAProxy config files, as no appropiate mode existed before.
-;; Version 0.x denotes an unfinished project.
-;; See the TODO comments in this source file for planned additions.
+;; This is a major mode for editing HAProxy config files, as no appropiate mode
+;; existed before.  Version 0.x denotes an unfinished project.  See the TODO
+;; comments in this source file for planned additions.
 
 ;; Put this file into your `load-path` and the following into your `~/.emacs`:
 ;;   (require 'haproxy-mode)
 
-;; See the README for more details.
+;; See the README for more details:
+;; https://github.com/port19x/haproxy-mode/
 
 ;;; Code:
 
