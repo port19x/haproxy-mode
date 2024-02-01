@@ -3,7 +3,7 @@
 ;; Copyright (c) 2024 port19
 
 ;; Author: port19 <port19@port19.xyz>
-;; Version: 0.6.9
+;; Version: 0.9.0
 ;; Package-Requires: ((emacs "24.3"))
 ;; Keywords: haproxy, languages, tools
 ;; Homepage: https://github.com/port19x/haproxy-mode
@@ -26,14 +26,10 @@
 ;;; Commentary:
 
 ;; This is a major mode for editing HAProxy config files, as no appropiate mode
-;; existed before.  Version 0.x denotes an unfinished project.  See the TODO
-;; comments in this source file for planned additions.
+;; existed before.
 
 ;; Put this file into your `load-path` and the following into your `~/.emacs`:
 ;;   (require 'haproxy-mode)
-
-;; See the README for more details:
-;; https://github.com/port19x/haproxy-mode/
 
 ;; Users may also be interested in the `httpcode` package.
 ;; It explains the meaning of an HTTP status code
@@ -42,16 +38,16 @@
 
 
 ;;;;##########################################################################
-;;;;  User Options, Variables
+;;;;  User Options
 ;;;;##########################################################################
 
-(defcustom haproxy-indent-level 4
-  "*Indentation of haproxy statements."
-  :type 'integer :group 'haproxy)
-
-(defcustom haproxy-indent-tabs-mode nil
-  "*Indentation can insert tabs in haproxy mode if this is non-nil."
+(defcustom haproxy-easteregg t
+  "*Activate the port19 easter egg."
   :type 'boolean :group 'haproxy)
+
+;;;;##########################################################################
+;;;;  Internal Variables
+;;;;##########################################################################
 
 (defvar haproxy-mode-syntax-table
   (let ((table (make-syntax-table)))
@@ -92,6 +88,8 @@
    '("\\(^\\)\\(global\\|defaults\\|frontend\\|backend\\|listen\\|resolvers\\)" . font-lock-keyword-face)
    ;; ssl is mostly generated anyway (https://ssl-config.mozilla.org/)
    '("\\(^[\s\t]+\\)\\(ssl.*\\)" . font-lock-doc-face)
+   ;; easter egg
+   `(,(if haproxy-easteregg "\\(:19\\)\\(\s+\\|$\\)" "") . font-lock-warning-face)
    ;; paths, time, ports
    '("\\(/[/a-z.]+\\)\\(\s+\\|$\\)" . font-lock-string-face)
    '("\\([0-9]+\\)\\([um]?\\)\\([smhd]$\\)" . font-lock-string-face)
@@ -110,8 +108,7 @@
     map)
   "Keymap for editing haproxy config files.")
 
-; TODO flycheck & flymake support via haproxy -c shell-command (+ invokability via local key or menu bar)
-; TODO indent-line-function
+; TODO something to check the buffer via haproxy -c
 
 ;;;###autoload
 (define-derived-mode haproxy-mode prog-mode "HAProxy"
