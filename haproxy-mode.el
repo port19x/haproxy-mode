@@ -4,7 +4,7 @@
 
 ;; Author: port19 <port19@port19.xyz>
 ;; Version: 0.6.9
-;; Package-Requires: ((emacs "24"))
+;; Package-Requires: ((emacs "24.3"))
 ;; Keywords: haproxy, languages, tools
 ;; Homepage: https://github.com/port19x/haproxy-mode
 ;; URL: https://github.com/port19x/haproxy-mode
@@ -60,7 +60,6 @@
     table)
   "Syntax table for `haproxy-mode'.")
 
-; TODO Support level1&2 font-locking. level 1 would be top-level sections and proxy keywords only.
 (defvar haproxy-font-lock-keywords
   (list
    ;; proxy keywords (https://docs.haproxy.org/2.9/configuration.html#4.1)
@@ -131,7 +130,6 @@ The variable `haproxy-indent-level' controls the amount of indentation.
               require-final-newline t
               paragraph-ignore-fill-prefix t
               outline-regexp "\\(global\\|defaults\\|frontend\\|backend\\|listen\\|resolvers\\)"
-              ;; FIXME consult not grouping these properly
               imenu-generic-expression `(("Misc" "^\\(listen\\|resolvers\\)" 0)
                                          ("Backends" "^\\(backend\\)\\([\s\t]+\\)\\(.*\\)" 3)
                                          ("Frontends" "^\\(frontend\\)\\([\s\t]+\\)\\(.*\\)" 3)
