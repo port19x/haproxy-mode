@@ -3,7 +3,7 @@
 ;; Copyright (c) 2024 port19
 
 ;; Author: port19 <port19@port19.xyz>
-;; Version: 0.5.5
+;; Version: 0.6.0
 ;; Package-Requires: ((emacs "24"))
 ;; Keywords: haproxy, languages, tools
 ;; Homepage: https://github.com/port19x/haproxy-mode
