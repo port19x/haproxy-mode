@@ -106,6 +106,7 @@
 ; TODO flycheck & flymake support via haproxy -c shell-command (+ invokability via local key or menu bar)
 ; TODO indent-line-function
 ; TODO define abbrevs
+; TODO outline-regexp
 ; TODO imenu definition finding
 
 ;;;###autoload
@@ -118,15 +119,13 @@ The variable `haproxy-indent-level' controls the amount of indentation.
 
   (use-local-map haproxy-mode-map)
 
-  (set (make-local-variable 'comment-start) "# ")
-  (set (make-local-variable 'comment-start-skip) "#+ *")
-  (set (make-local-variable 'comment-end) "")
-  (set (make-local-variable 'comment-auto-fill-only-comments) t)
-  (set (make-local-variable 'require-final-newline) t)
-  (set (make-local-variable 'paragraph-ignore-fill-prefix) t)
-
-  (set (make-local-variable 'font-lock-defaults)
-       '(haproxy-font-lock-keywords nil)))
+  (setq-local comment-start "# "
+              comment-start-skip "#+ *"
+              comment-end ""
+              comment-auto-fill-only-comments t
+              require-final-newline t
+              paragraph-ignore-fill-prefix t
+              font-lock-defaults '(haproxy-font-lock-keywords)))
 
 ;;;###autoload
 (add-to-list 'auto-mode-alist '("haproxy\\.cfg\\'"  . haproxy-mode))
