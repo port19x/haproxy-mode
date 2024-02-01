@@ -3,7 +3,7 @@
 ;; Copyright (c) 2024 port19
 
 ;; Author: port19 <port19@port19.xyz>
-;; Version: 0.4.0
+;; Version: 0.5.0
 ;; Package-Requires: ((emacs "24"))
 ;; Keywords: haproxy, languages, tools
 ;; Homepage: https://github.com/port19x/haproxy-mode
@@ -106,7 +106,6 @@
 ; TODO flycheck & flymake support via haproxy -c shell-command (+ invokability via local key or menu bar)
 ; TODO indent-line-function
 ; TODO define abbrevs
-; TODO outline-regexp
 ; TODO imenu definition finding
 
 ;;;###autoload
@@ -125,6 +124,7 @@ The variable `haproxy-indent-level' controls the amount of indentation.
               comment-auto-fill-only-comments t
               require-final-newline t
               paragraph-ignore-fill-prefix t
+              outline-regexp "\\(global\\|defaults\\|frontend\\|backend\\|listen\\|resolvers\\)"
               font-lock-defaults '(haproxy-font-lock-keywords)))
 
 ;;;###autoload
