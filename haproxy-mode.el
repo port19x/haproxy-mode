@@ -107,6 +107,14 @@
 ; TODO indent-line-function
 ; TODO define abbrevs
 
+;; (define-abbrev global-abbrev-table "lol" "LAUGHT OUT LOUD")
+
+;; (defun test ()
+;;   (let ((prompt (read-string "Give me something: ")))
+;;     (insert (concat "LAUGHT OUT LOUD -- " prompt))))
+
+;; (define-abbrev global-abbrev-table "lol" "" 'test)
+
 ;;;###autoload
 (define-derived-mode haproxy-mode prog-mode "HAProxy"
   "Major mode for highlighting haproxy config files.
