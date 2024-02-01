@@ -106,6 +106,15 @@
 ; TODO flycheck & flymake support via haproxy -c shell-command (+ invokability via local key or menu bar)
 ; TODO indent-line-function
 
+(defvar haproxy-http-codes
+  '((404 . "Not found")
+    (403 . "Forbidden")))
+
+(defun haproxy-http-eldoc-function ()
+  (when-let ((code (thing-at-point 'number))
+             (doc (alist-get code haproxy-http-codes)))
+    (format "%s" doc)))
+
 ;;;###autoload
 (define-derived-mode haproxy-mode prog-mode "HAProxy"
   "Major mode for highlighting haproxy config files.
@@ -128,6 +137,7 @@ The variable `haproxy-indent-level' controls the amount of indentation.
                                          ("Backends" "^\\(backend\\)\\([\s\t]+\\)\\(.*\\)" 3)
                                          ("Frontends" "^\\(frontend\\)\\([\s\t]+\\)\\(.*\\)" 3)
                                          ("--" "^\\(global\\|defaults\\)" 0))
+              eldoc-documentation-function #'haproxy-http-eldoc-function
               font-lock-defaults '(haproxy-font-lock-keywords)))
 
 ;;;###autoload
