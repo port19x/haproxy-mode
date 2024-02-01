@@ -125,10 +125,10 @@ The variable `haproxy-indent-level' controls the amount of indentation.
               paragraph-ignore-fill-prefix t
               outline-regexp "\\(global\\|defaults\\|frontend\\|backend\\|listen\\|resolvers\\)"
               ;; FIXME consult not grouping these properly
-              imenu-generic-expression `(("--" "^\\(global\\|defaults\\)" 0)
-                                         ("Frontends" "^\\(frontend\\)\\([\s\t]+\\)\\(.*\\)" 3)
+              imenu-generic-expression `(("Misc" "^\\(listen\\|resolvers\\)" 0)
                                          ("Backends" "^\\(backend\\)\\([\s\t]+\\)\\(.*\\)" 3)
-                                         ("Misc" "^\\(listen\\|resolvers\\)" 0))
+                                         ("Frontends" "^\\(frontend\\)\\([\s\t]+\\)\\(.*\\)" 3)
+                                         ("--" "^\\(global\\|defaults\\)" 0))
               font-lock-defaults '(haproxy-font-lock-keywords)))
 
 ;;;###autoload
