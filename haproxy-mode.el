@@ -3,7 +3,7 @@
 ;; Copyright (c) 2024 port19
 
 ;; Author: port19 <port19@port19.xyz>
-;; Version: 0.9.0
+;; Version: 0.9.1
 ;; Package-Requires: ((emacs "24.3"))
 ;; Keywords: haproxy, languages, tools
 ;; Homepage: https://github.com/port19x/haproxy-mode
@@ -101,12 +101,6 @@
 ;;;;##########################################################################
 ;;;;  Code
 ;;;;##########################################################################
-
-(defvar haproxy-mode-map
-  (let
-      ((map (make-sparse-keymap)))
-    map)
-  "Keymap for editing haproxy config files.")
 
 ; TODO something to check the buffer via haproxy -c
 
