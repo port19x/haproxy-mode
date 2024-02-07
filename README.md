@@ -2,8 +2,8 @@
 
 *Emacs major mode for editing HAProxy config files*
 
-<!--
 [![MELPA](https://melpa.org/packages/haproxy-mode-badge.svg)](https://melpa.org/#/haproxy-mode)
+<!--
 [![MELPA Stable](https://stable.melpa.org/packages/haproxy-mode-badge.svg)](https://stable.melpa.org/#/haproxy-mode)
 -->
 
